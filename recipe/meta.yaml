@@ -25,7 +25,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base
+    - r-base {{ r_version }}
     - r-r6
     - r-cli >=3.0.0
     - r-curl
@@ -36,7 +36,7 @@ requirements:
     - r-rlang >=1.0.0
     - r-withr
   run:
-    - r-base
+    - r-base {{ r_version }}
     - r-r6
     - r-cli >=3.0.0
     - r-curl
